@@ -13,11 +13,8 @@
 
 > 1. 阿特伍德（Atwood）定律：Any application that can be written in JavaScript, will eventually be written in JavaScript
 >
-> 2. 《Understanding ECMAScript 6》一书是作者 Nicholas C. Zakas 在 
+> 2. 《Understanding ECMAScript 6》一书是作者 Nicholas C. Zakas 在 GitHub 开源社区撰写而成
 >
->    [GitHub]: https://github.com/nzakas/understandinges6
->
->    撰写而成
 
 ## 序——Dan Abramov
 
