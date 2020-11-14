@@ -141,7 +141,7 @@
 > 1. 作为网景的继承者，Mozilla 是唯一仍在延续最初 JavaScript 版本编号的浏览器厂商
 > 2. 多数浏览器对 JavaScript 的支持，指的是**实现 ECMAScript 和 DOM 的程度**
 
-![](images/第 1 章：什么是 JavaScript.png)
+![](./images/第 1 章：什么是 JavaScript.png)
 
 #### 第 2 章：HTML 中的 JavaScript
 
