@@ -115,7 +115,7 @@ export default class App extends Component {
 
 ​	Given that the only route configuration we have for `Home` is the screen component, we don't nedd to use the `{ screen: HomeScreen }` configuration format, we can use the screen component directly.
 
-> 鉴于我们唯一拥有的路由配置 `Home` 是屏幕组件，所以我们不需要使用 `{ screen: HomeScreen }` 配置格式，而可以直接使用屏幕组件（读者：此处只是简化了格式，由一个对象`{ screen: HomeScreen }`直接变成了一个组件`HomeScreen`）。
+> 鉴于路由配置中的 `Home` 拥有唯一的屏幕组件，所以我们不需要使用 `{ screen: HomeScreen }` 配置格式，而可以直接使用屏幕组件（读者：此处只是简化了格式，由一个对象`{ screen: HomeScreen }`直接变成了一个组件`HomeScreen`）。
 
 ```js
 const AppNavigator = createStackNavigator({
