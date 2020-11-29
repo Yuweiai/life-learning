@@ -20,7 +20,7 @@
 
 > 让我们从演示最常见的导航器 —— createStackNavigator 开始。
 
-## Creating a stack navigator（创建堆栈导航）
+### Creating a stack navigator（创建堆栈导航）
 
 ​	`createStackNavigator` is **a function that returns a React component**. It takes **a route configuration object** and, optionally, **an options object** (we omit this below, for now). Because the `createStackNavigator` function returns a React component, we can export it directly from `App.js` to be used as our App's root component.
 
@@ -111,7 +111,7 @@ export default class App extends Component {
 }
 ```
 
-## Route configuration shorthand（路由配置速记）
+### Route configuration shorthand（路由配置速记）
 
 ​	Given that the only route configuration we have for `Home` is the screen component, we don't nedd to use the `{ screen: HomeScreen }` configuration format, we can use the screen component directly.
 
@@ -123,7 +123,7 @@ const AppNavigator = createStackNavigator({
 })
 ```
 
-## Adding a second route（添加第二个路由）
+### Adding a second route（添加第二个路由）
 
 ​	The `<AppContainer />` component doesn't accept any props —— all configurationn is specified in the `options` parameter to the `AppNavigator` `createStackNavigator` function. We left the `options` blank, so it just uses the default configuration. To see an example of using the `options` object, we will add a second screen to the stack navigator.
 
@@ -159,7 +159,7 @@ const AppNavigator = createStackNavigator(
 
 > 现在我们的堆栈有两个路由：一个 `Home` 路由和一个 `Details` 路由。`Home` 路由对应 `HomeScreen` 组件，`Details` 路由对应 `DetailsScreen` 组件。堆栈的初始路由是 `Home` 路由。此时我们自然会问：如何从 Home 路由跳转到 Details 路由？下一部分将对此进行介绍。
 
-## Summary（总结）
+### Summary（总结）
 
 - React Native doesn't have a built-in API for navigation like a web browser does. React Navigation provides this for you, along with the iOS and Android gestures and animations to transition between screens.
 - `createStackNavigator` is a function that takes a route configuration object and an options object and returns a React component.

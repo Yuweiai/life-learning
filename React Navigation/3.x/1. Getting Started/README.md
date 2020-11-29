@@ -8,7 +8,7 @@
 
 > 在致力于为项目使用 React Navigation 之前，你可能需要阅读 anti-pitch —— 它可以帮助你了解我们选择的折衷方法，以及我们认为的当前的库的不足的地方
 
-## What to expect（期望）
+### What to expect（期望）
 
 ​	If you're already familiar with React Native then you'll be able to get moving with React  Navigation quickly! If not, you may want to read sections 1 to 4 (inclusive) of  [React Native Express](http://reactnativeexpress.com/) first, then come back here when you're done.
 
@@ -18,7 +18,7 @@
 
 > 在本文档接下来的 "基础知识"  部分，我们将介绍 React Navigation 最重要的几个方面。它应该足以让你知道如何构建典型的小型移动应用程序，并为你提供深入研究 React Navigation 更高级部分所需的背景知识。
 
-## Installation（安装）
+### Installation（安装）
 
 （1）Install the `react-navigation`  package in your React Native project.
 
@@ -106,7 +106,7 @@ cd ..
 
 > 最后，运行 `react-native run-android` 或者 `react-native run-ios`以启动设备或者模拟器中的应用
 
-## Hybrid iOS Application (Skip for RN only projects)：混合iOS应用程序（只有 RN 的项目请忽略）
+### Hybrid iOS Application (Skip for RN only projects)：混合iOS应用程序（只有 RN 的项目请忽略）
 
 ​	If you're using React Navigation within a hybrid app - an iOS app that has both Swift/ObjC and React Native parts - you may be missing the `RTCLinkingIOS` subspec in your Podfile, which is installed by default in new RN projects. To add this, ensure your Podfile looks like the following: 
 

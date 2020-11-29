@@ -24,7 +24,7 @@
 
 > 我们（React Navigation）将执行与后者相似的操作，但不是使用 `document` 全局变量，而是使用 `navigation` prop 传递到我们定义的屏幕组件（screen components）
 
-## Navigating to a new screen（导航到另一个屏幕）
+### Navigating to a new screen（导航到另一个屏幕）
 
 ```js
 import React, { Component } from 'react'
@@ -72,7 +72,7 @@ class HomeScreen extends Component {
 
 > 现在，我们有了一个包含两个路由的堆栈：1）`Home` 路由；2）`Details` 路由。如果从 `Details` 路由再次导航到 `Details` 路由又会发生什么呢？
 
-## Navigate to a route multiple times（多次导航到同一个路由）
+### Navigate to a route multiple times（多次导航到同一个路由）
 
 ```js
 class DetailsScreen extends Component {
@@ -109,7 +109,7 @@ class DetailsScreen extends Component {
 
 > 每当你调用 `push`时，都会向导航堆栈添加一条新的路由。而当你调用 `navigate` 时，首先在现有路由中尝试查找具有指定路由名称参数的路由，并且仅在堆栈中还没有该路由时才 `push` 新路由
 
-## Going back（路由返回）
+### Going back（路由返回）
 
 ​	The header provided by stack navigator will automatically include a back button when it is possible to go back from the active screen (if there is only screen in the navigation stack, there is nothing that you can go back to, and so there is no back button).
 
@@ -159,7 +159,7 @@ class DetailsScreen extends Component {
 
 > 另一个常见的要求是能够返回多个屏幕——例如，如果在堆栈中有多个屏幕，当想要释放所有屏幕来返回到第一个屏幕时。在这种情况下，如果我们知道我们想要返回的第一个屏幕是 `Home`，那么我们可以使用 `navigate('Home')`（不是 `push`！试试看有什么不同）另一个选择是 `navigation.popToTop()`，它可以返回到堆栈中的第一个屏幕（而不必知道堆栈中的第一个屏幕是什么）
 
-## Summary（总结）
+### Summary（总结）
 
 - `this.props.navigation.navigate('RouteName')`: pushes a new route to the stack navigator if it's not already in the stack, otherwise it jumps to that screen.
 - We can call `this.props.navigation.push('RouteName')` as many times as we like and it will continue pushing routes

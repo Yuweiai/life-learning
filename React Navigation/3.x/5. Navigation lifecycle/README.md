@@ -12,7 +12,7 @@
 
 > 对于 web 的 react-navigation 来说，你可以认为当用户从路由 A 导航到路由 B 时，A 将卸载（A 的 `componentWillUnmount` 会被调用）；用户返回到路由 A 时，A 将加载。然而，在 react-navigation 中，虽然这些 React 生命周期仍然有效，但它们的用法并不同于 web——这是由更复杂的移动导航需求驱动的
 
-## Example scenario（示例场景）
+### Example scenario（示例场景）
 
 ​	Consider a stack navigator with screens A and B. After navigating to A, its `componentDidMount` is called. When pushing B, its `componentDidMount` is also called, but A remains mounted on the stack and its `componentWillUnmount` is therefor not called.
 
@@ -47,7 +47,7 @@ const TabNavigator = createBottomTabNavigator({
 
 > 我们从 `HomeScreen` 开始，然后导航到 `DetailsScreen`。然后，我们使用标签栏切换到 `settingScreen` 并导航到 `ProfileScreen`。完成这一系列操作后，这四个屏幕都装载了。此时如果通过标签栏切换回 `HomeStack`，则会看到 `DetailsScreen` —— 这意味着 `HomeStack` 的导航状态被保留了。
 
-## React Navigation lifecycle events（React Navigation 生命周期事件）
+### React Navigation lifecycle events（React Navigation 生命周期事件）
 
 ​	Now that we understand how React lifecycle methods work in React Navigation, let's answer the question we asked at the beginning: "How do we find out that a user is leaving it or coming back to it?"
 
@@ -61,7 +61,7 @@ const TabNavigator = createBottomTabNavigator({
 
 > 你的许多用例可以包含 `withNavigationFocus` HOC 或者 `<NavigationEvents />`，它们使用起来更直接一些 
 
-## Summary（总结）
+### Summary（总结）
 
 - While React's lifecycle methods are still valid, React Navigation adds more lifecycle events that you can subscribe to through the `navigation` prop.
 - You may also use the `withNavigationFocus` HOC or `<NavigationEvents />` component to react to lifecycle changes.
