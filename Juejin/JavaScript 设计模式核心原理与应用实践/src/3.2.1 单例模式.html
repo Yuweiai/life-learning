@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        class SingleDog {
+            show() {
+                console.log('我是一个单例对象');
+            }
+        }
+        
+        const s1 = new SingleDog()
+        const s2 = new SingleDog()
+
+        console.log(s1 === s2); /* false */
+    </script> -->
+
+    <!-- <script>
+        class SingleDog {
+            show() {
+                console.log('我是一个单例对象');
+            }
+
+            static getInstance() {
+                if(!SingleDog.instance) {
+                    SingleDog.instance = new SingleDog()
+                }
+                return SingleDog.instance
+            }
+        }
+
+        const s1 = SingleDog.getInstance()
+        const s2 = SingleDog.getInstance()
+
+        console.log(s1 === s2); /* true */
+    </script> -->
+
+    <script>
+        class SingleDog {
+            show() {
+                console.log('我是一个单例对象');
+            }
+
+        }
+
+        SingleDog.getInstance = (function() {
+            // 定义自由变量instance, 模拟私有变量
+            // ——此处每调用一次并不会重新定义一次
+            let instance = null
+
+            return function() {
+                if(!instance) {
+                    instance = new SingleDog()
+                }
+                return instance
+
+                //如果返回以下语句，则比较结果为false，每一次都重新new了一遍
+                // return instance ? instance : new SingleDog()
+            }
+        })()
+
+        const s1 = SingleDog.getInstance()
+        const s2 = SingleDog.getInstance()
+
+        console.log(s1 === s2); /* true */
+    </script>
+</body>
+</html>
